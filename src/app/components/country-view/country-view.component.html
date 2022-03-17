@@ -1,0 +1,36 @@
+
+<section class="container">
+
+  <div class="row">
+
+    <div class="col-12 mt-3 p-3 d-flex justify-content-around align-items-center">
+
+      <div class="p-3 card shadow">
+        <h2>{{country?.name.common}} </h2>
+      
+        <h5>CAPITAL: {{country?.capital}}</h5>
+
+        <ul class="list-group list-group-flush mt-4">
+          <li class="list-group-item">LANGUAGE: {{country?.languages | lengua}}</li>
+          <li class="list-group-item">CURRENCY: {{country?.currencies | moneda}}</li>
+          <li class="list-group-item">POPULATION: {{country?.population | number}}</li>
+          <li class="list-group-item">AREA: {{country?.area }}m<sup>2</sup></li>
+          <li class="list-group-item">DRIVING SIDE: {{country?.car.side}} </li>
+        </ul>
+
+      </div>
+      
+      <div>
+        <figure class="shadow">
+        <img [src]="country?.flags.png" [alt]="country?.name.common">
+      </figure>
+      </div>
+    </div>
+
+    <div class="d-flex justify-content-center mt-5">
+        <button class="btn btn-dark w-25" [routerLink]="['/home']">Volver al mapa</button>
+    </div>
+      
+
+  </div>
+</section>

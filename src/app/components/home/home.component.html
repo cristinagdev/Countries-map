@@ -1,0 +1,47 @@
+<section class="container  p-3">
+
+  <div class="text-center p-2">
+    
+    <h4>Find information about Europe's countries</h4>
+    <p>Click on the country and see</p>
+  </div>
+  
+
+  <div class="card mt-3">
+    <agm-map [fitBounds]="true">
+
+      <agm-marker *ngFor="let country of arrCountries" [latitude]="country.capitalInfo.latlng[0]" [longitude]="country.capitalInfo.latlng[1]" [agmFitBounds]="true">
+
+      <agm-info-window>
+
+        <div class="text-center">
+
+          <h5 class="infoName">{{country.name.common}}</h5>
+          <hr>
+          <p>{{country.capital}}</p>
+          <p>{{country.currencies | moneda}}</p>
+        </div>
+        
+
+        <div class="row">
+          <div class="col-12  bg-light py-2 ms-2">
+            <a [routerLink]="['/country', country.cca2.toLowerCase()]">Ver más</a>
+          </div>
+
+          <div class="col-12 bg-light py-2 ms-2">
+            <a target="_blank" href="{{country.maps.googleMaps}}">Ver en google Maps</a>
+          </div>
+
+        </div>
+        
+        
+      </agm-info-window>
+    
+      </agm-marker>
+
+    </agm-map>
+
+  </div>
+
+</section>
+
