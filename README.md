@@ -1,3 +1,11 @@
+## Descripción 
+---
+
+Página sencilla usando mapas que hace peticiones a una API y devuelve datos sobre países europeos. También puede redirigirte a Google Maps. Tecnología usada:
+- HTML 📄
+- CSS 🎨
+- Angular con TypeScript✨
+
 ## Url para ver el resultado
 
 Aquí puedes ver el proyecto: https://countriesapp21.netlify.app
